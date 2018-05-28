@@ -28,9 +28,13 @@ public class Box extends JComponent{
     }
     
     @Override
-    public void move(int x, int y){
-        rec.translate(x, y);
-        repaint();
+    public void move(int x, int y) {
+        if (rec.getLocation().x > 0 && rec.getLocation().x < 500) {
+            if (rec.getLocation().y > 0&& rec.getLocation().y < 500) {
+                rec.translate(x, y);
+                repaint();
+            }
+        }
     }
     
 }
