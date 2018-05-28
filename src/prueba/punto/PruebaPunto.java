@@ -15,22 +15,9 @@ import javax.swing.Timer;
  */
 public class PruebaPunto {
 
-    public PruebaPunto(){
-        JFrame frame = new JFrame();
-        frame.setSize(500,500);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        final Box box = new Box();
-        frame.add(box);
-        frame.setVisible(true);
-        ActionListener actionListener = new TimeListener(box);
-        
-        Timer timer = new Timer(100,actionListener);
-        timer.start();
-    }
-    
+   
     public static void main(String[] args) {
-        new PruebaPunto();
+        new Contenedor();
     }
     
 }
