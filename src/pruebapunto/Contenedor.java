@@ -6,6 +6,7 @@
 package pruebapunto;
 
 import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
@@ -25,7 +26,8 @@ public class Contenedor {
         frame.setVisible(true);
         ActionListener actionListener = new TimeListener(box);
         
-        Timer timer = new Timer(100,actionListener);
+        Timer timer = new Timer(10,actionListener);
+        frame.addKeyListener((KeyListener) actionListener);
         timer.start();
     }
 }

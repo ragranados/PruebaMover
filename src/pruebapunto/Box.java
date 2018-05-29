@@ -14,27 +14,28 @@ import javax.swing.JComponent;
  *
  * @author rau3
  */
-public class Box extends JComponent{
+public class Box extends JComponent {
+
     public Rectangle rec;
-    
-    public Box(){
-        rec = new Rectangle(10,10,25,25);
+
+    public Box() {
+        rec = new Rectangle(10, 10, 25, 25);
     }
-    
+
     @Override
-    public void paint(Graphics g){
+    public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.draw(rec); 
+        g2d.draw(rec);
     }
-    
+
     @Override
     public void move(int x, int y) {
-        if (rec.getLocation().x > 0 && rec.getLocation().x < 500) {
-            if (rec.getLocation().y > 0&& rec.getLocation().y < 500) {
+        if (rec.getLocation().x > 0 && rec.getLocation().x < 475) {
+            //if (rec.getLocation().y > 0 && rec.getLocation().y < 475) {
                 rec.translate(x, y);
                 repaint();
-            }
+            //}
         }
     }
-    
+
 }
