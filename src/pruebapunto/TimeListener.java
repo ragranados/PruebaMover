@@ -71,7 +71,7 @@ public class TimeListener implements ActionListener, KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
         int code = e.getKeyCode();
-        if (code == KeyEvent.VK_UP) {
+        if (code == KeyEvent.VK_UP||code == KeyEvent.VK_DOWN) {
             vely = 0;
 
         }
